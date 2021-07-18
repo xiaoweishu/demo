@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-18T16:31:27.603Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="wkO0H8Pn5igOa2anpbiD" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-18T16:41:28.588Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="9sv3pKTybSON8WlyIZC5" version="14.6.9" type="github">
   <diagram id="3uCvn8jtByhbgXQ2X7Po" name="RocketMQ路由信息注册">
     <mxGraphModel dx="1426" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -28,8 +28,44 @@
         <mxCell id="f9a8QpdjIeNZDA1KyQ76-4" value="封装RegisterBrokerBody&#xa;心跳包请求体" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="604" y="240" width="121" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="f9a8QpdjIeNZDA1KyQ76-6" value="BrokerFixedThreadPoolExecutor" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="270" y="220" width="244" height="150" as="geometry" />
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-6" target="f9a8QpdjIeNZDA1KyQ76-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-6" value="BrokerFixedThreadPoolExecutor&#xa;进行注册broker信息到name server中" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="207.5" width="244" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-9" target="f9a8QpdjIeNZDA1KyQ76-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-9" value="该过程中的网络传输基于Netty" style="ellipse;whiteSpace=wrap;html=1;rounded=1;strokeColor=#d79b00;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="322" y="396.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-11" target="f9a8QpdjIeNZDA1KyQ76-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-11" value="RequestCode" style="shape=process;whiteSpace=wrap;backgroundOutline=1;rounded=1;strokeColor=#d79b00;fillColor=#ffe6cc;html=1;" vertex="1" parent="1">
+          <mxGeometry x="122" y="396.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-13" target="f9a8QpdjIeNZDA1KyQ76-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-13" value="DefaultRequestProcessor&lt;br&gt;负责处理对应的RequestCode" style="shape=process;backgroundOutline=1;rounded=1;strokeColor=#d79b00;fillColor=#ffe6cc;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="93" y="540" width="178" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-18" target="f9a8QpdjIeNZDA1KyQ76-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-18" value="DefaultRequestProcessor&lt;br&gt;#registerBroker" style="shape=process;backgroundOutline=1;rounded=1;strokeColor=#d79b00;fillColor=#ffe6cc;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="351" y="540" width="178" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-20" target="f9a8QpdjIeNZDA1KyQ76-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-20" value="RouteInfoManager&lt;br&gt;#registerBroker" style="shape=process;backgroundOutline=1;rounded=1;strokeColor=#d79b00;fillColor=#ffe6cc;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="609" y="540" width="178" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-22" value="该部分是真正处理broker发送的心跳包" style="shape=callout;rounded=1;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;strokeColor=#d79b00;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="638" y="670" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
