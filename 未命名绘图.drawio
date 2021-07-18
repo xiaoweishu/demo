@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2021-07-18T16:13:30.899Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="wH04Q_yg2RWdbUXfcgOX" version="14.6.9" type="github"><diagram id="3uCvn8jtByhbgXQ2X7Po" name="Page-1">ddHNEoIgEADgp+Gu0JidzerSyUNnRjZhBl0GabSePh0wY6wTy7cLyw9hRTueLTfyigI0oYkYCTsSStMdzaZhlqeXLA/QWCVC0QqVekHAJOhDCeijQoeonTIx1th1ULvIuLU4xGV31HFXwxvYQFVzvdWbEk56zel+9QuoRi6d0+zgMy1fisNNeskFDl/ESsIKi+h81I4F6Pnxlnfx605/sp+DWejcjwVTsO49TaIfYuUb</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-07-18T16:31:27.603Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="wkO0H8Pn5igOa2anpbiD" version="14.6.9" type="github">
+  <diagram id="3uCvn8jtByhbgXQ2X7Po" name="RocketMQ路由信息注册">
+    <mxGraphModel dx="1426" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IgVGf6Aafy9_dBFMTFZp-3" value="" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IgVGf6Aafy9_dBFMTFZp-1" target="IgVGf6Aafy9_dBFMTFZp-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IgVGf6Aafy9_dBFMTFZp-1" value="BrokerController&lt;br&gt;#registerBrokerAll" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-3" value="" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IgVGf6Aafy9_dBFMTFZp-2" target="f9a8QpdjIeNZDA1KyQ76-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IgVGf6Aafy9_dBFMTFZp-2" value="BrokerOuterAPI&#xa;#registerBrokerAll" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="78" width="121" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-5" value="" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-2" target="f9a8QpdjIeNZDA1KyQ76-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-2" value="封装RegisterBrokerRequestHeader" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="74.5" width="209" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f9a8QpdjIeNZDA1KyQ76-4" target="f9a8QpdjIeNZDA1KyQ76-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-4" value="封装RegisterBrokerBody&#xa;心跳包请求体" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="604" y="240" width="121" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="f9a8QpdjIeNZDA1KyQ76-6" value="BrokerFixedThreadPoolExecutor" style="whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="220" width="244" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
